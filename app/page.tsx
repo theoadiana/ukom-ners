@@ -68,8 +68,7 @@ export default function LandingPage() {
                   const available = newTopic === "all"
                     ? QuestionsDB.length
                     : QuestionsDB.filter((q) => q.topicId === newTopic).length;
-                  const cap = Math.min(available, 50);
-                  setQuestionCount(Math.min(questionCount, Math.max(1, cap)));
+                  setQuestionCount(Math.min(questionCount, Math.max(1, available)));
                 }}
                 className="w-full h-10 px-3 rounded-md border border-stone-300 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
               >
@@ -123,7 +122,7 @@ export default function LandingPage() {
             <BookOpen className="h-5 w-5 text-primary shrink-0 mt-0.5" />
             <div>
               <div className="text-sm font-semibold text-stone-800">{QuestionsDB.length} Soal</div>
-              <div className="text-xs text-stone-500">8 domain kompetensi</div>
+              <div className="text-xs text-stone-500">{TOPICS.length} domain kompetensi</div>
             </div>
           </div>
           <div className="flex items-start gap-3 p-4 rounded-lg border border-stone-200 bg-white">

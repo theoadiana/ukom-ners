@@ -1,7 +1,7 @@
 # UKOM Ners CBT
 
 ## Stack
-- Next.js 14 (App Router), TypeScript, Tailwind CSS
+- Next.js 16 (App Router), TypeScript, Tailwind CSS
 - Lucide React icons
 - LocalStorage for persistence (no backend)
 
@@ -13,8 +13,7 @@ npm run build  # Production build
 ```
 
 ## Bank Soal
-- 120 soal di `lib/questions.ts` (15 per domain)
-- 8 domain kompetensi UKOM Ners
+- 260 soal di `lib/questions.ts` (7 domain kompetensi)
 - Growable: tambah soal baru di `QuestionsDB`
 
 ## Arsitektur
